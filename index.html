@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App - Z-strike</title>
+    <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+<div class="card">
+    <h3>Z Weather </h3>
+    <div class="search">
+        <input type="text" id="cityInput" placeholder="Enter zip ocde, city name">
+		<i class="fa-solid fa-magnifying-glass search-icon"></i>
+		<div id="suggestions" class="suggestions-box">
+		</div>
+    </div>
+	
+    <div id="error" class="error">
+        Invalid city name.
+    </div>
+	
+    <div id="current-weather" class="weather">
+         <div class="weather-condition-container">  
+			<img src="images/rain.png" class="weather-icon" alt="">   
+		</div>
+		<p class="condition"></p> 
+        <h2 id="city"><span class="city">City</span>, <span class="state">State</span><!--<span class="country">Country</span>--></h2>
+        <div class="metric-imperial">
+            <span class="temp"></span>  
+            <span id="metric" class="metric">°C</span>
+            <span class="pipe">|</span>
+            <span id="imperial" class="imperial active">°F</span>
+			
+        </div>
+		<div class="detailWeatherContainer">
+			<div class="leftColumn">
+			  <p class="localtime"></p>
+              <p class="time"></p>
+
+			 </div>
+			 <div class="rightColumn">
+				<p class="feelslike"></p>
+				<p class="humidity"></p>
+				<p class="wind"></p>
+				<p class="sunrise"></p>
+			    <p class="sunset"></p>
+		     </div>
+		</div>
+		<div id="hourlyWeatherContainerWrap">
+			 <div id="hourlyWeatherContainer">  
+
+			</div>  
+			   <button class="scroll-button left-arrow" onclick="scrollLeft()">  
+				<i class="fa-solid fa-arrow-left"></i> 	</button> 
+				<button class="scroll-button right-arrow" onclick="scrollRight()">  
+				<i class="fa-solid fa-arrow-right"></i> </button>  
+			</div>
+		
+		<div class="other-conditions"><p class="localtime"></p> </div>
+    </div>
+	<div id="forecastContainer" class="forecastContainer"></div>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>
